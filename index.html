@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+
+<!-- LEFT MENU -->
+<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none; width: 30%" id="leftMenu">
+  <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+
+<!-- DIV FOR THE TAB HEADER ROW -->
+
+<div class="w3-row">
+    <a href="javascript:void(0)" onclick="openCity(event, 'London');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">London</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Paris</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openCity(event, 'Tokyo');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Tokyo</div>
+    </a>
+  </div>
+<!-- END OF THE TAB HEADER ROW -->
+
+<!-- DIV WITH CONTENT WITHIN TABS -->
+<div id="London" class="w3-container city" style="display:none">
+    <h2>London</h2>
+    <p>London is the capital city of England.</p>
+  </div>
+
+  <div id="Paris" class="w3-container city" style="display:none">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p>
+  </div>
+
+  <div id="Tokyo" class="w3-container city" style="display:none">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+</div>
+<!-- END OF CONTENT WITHIN TABS -->
+
+</div>
+
+
+
+<!-- RIGHT MENU -->
+<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-right" style="display:none; width:40%;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+
+<!-- DIV FOR THE TAB HEADER ROW -->
+
+<div class="w3-row">
+    <a href="javascript:void(0)" onclick="openCity(event, 'L.A');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Converter Tool</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openCity(event, 'Mexicali');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Mexicali</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openCity(event, 'California');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">California</div>
+    </a>
+  </div>
+<!-- END OF THE TAB HEADER ROW -->
+
+<!-- DIV WITH CONTENT WITHIN TABS -->
+<div id="L.A" class="w3-container city" style="display:none">
+            <!-- DIV TIME FUCNTION ABOVE, CONVERSION BELOW -->
+        <body>
+           <div id="left_menu"; style="padding:0px 0px 0px 50px;">
+              <h2>Convert Celcius to Fahrenhet</h2>
+
+              <p>Insert a number into one of the input fields below:</p>
+
+              <p><input id="c" onkeyup="convert('C')"> degrees Celsius</p>
+
+              <p><input id="f" onkeyup="convert('F')"> degrees Fahrenheit</p>
+           </div>
+
+                   <script>
+                   function convert(degree) {
+                       var x;
+                       if (degree == "C") {
+                           x = document.getElementById("c").value * 9 / 5 + 32;
+                           document.getElementById("f").value = Math.round(x);
+                       } else {
+                           x = (document.getElementById("f").value -32) * 5 / 9;
+                           document.getElementById("c").value = Math.round(x);
+                       }
+                   }
+                   </script>
+
+         </body>
+  </div>
+<!-- MEXICALI TAB SECTION STARTS ////-->
+  <div id="Mexicali" class="w3-container city" style="display:none">
+                      <head>
+                   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                   <script>
+                   $(document).ready(function(){
+                       $("#flip").click(function(){
+                           $("#panel").slideToggle("slow");
+                       });
+                   });
+                   </script>
+
+                   <style>
+                   #panel, #flip {
+                       padding: 5px;
+                       text-align: center;
+                       background-color: #e5eecc;
+                       border: solid 1px #c3c3c3;
+                   }
+
+                   #panel {
+                       padding: 50px;
+                       display: none;
+                   }
+                   </style>
+                   </head>
+                   <body>
+
+<div id="flip">Mexicali</div>
+<div id="panel">
+  <p>Mexicali is the capital of Mexico.</p>
+
+  <img src="images/toad.jpg" alt="Car" style="padding:20px; width:70%">
+
+  <div class="w3-container">
+  <p> Baja California, Mexicali Mexico: known for their dry bush</p>
+
+  </div>
+
+</div>
+</body>
+<!-- ////////22222////////// -->
+<script>
+$(document).ready(function(){
+    $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
+});
+</script>
+
+<style>
+#panel2, #flip2 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel2 {
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+            <body>
+
+            <div id="flip2">Voted best dealer in Mexicali April 2017 </div>
+            <div id="panel2">
+              <!-- /////////// -->
+              <head>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+              <script>
+              $(document).ready(function(){
+                  $("button").click(function(){
+                      $("#div1").fadeToggle();
+                      $("#div2").fadeToggle("slow");
+                      $("#div3").fadeToggle("slow");
+                  });
+              });
+              </script>
+              </head>
+              <body>
+                <b><strong> Mike's Smoke Shop:</strong> Open since 2002</b>
+
+              <button>Click here to check out some of the best medicine available.</button><br>
+              <br/>
+              <div id="div1" style="width:90%;height:25%;background-color:green;"><alt="Image"><img src="images/marijuana1small.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+              <br/>
+              <div id="div2" style="width:90%;height:25%;background-color:green;"><alt="Image"><img src="images/marijuana2small.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+              <br/>
+              <div id="div3" style="width:90%;height:25%;background-color:green;"><alt="Image"><img src="images/marijuana3small.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+              <p><i> "Come down to my store and get yourself something south of the boarder"</i></p>
+              </body>
+              <!-- ////////-->
+            </div>
+
+            </body>
+
+<!-- ////////3333////////// -->
+<script>
+$(document).ready(function(){
+    $("#flip3").click(function(){
+        $("#panel3").slideToggle("slow");
+    });
+});
+</script>
+
+<style>
+#panel3, #flip3 {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel3 {
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<div id="flip3">VIDEO:Learn Mexicali marijuana</div>
+<div id="panel3">
+  <div class="col-sm-3">
+      <iframe width="385" height="205" src="https://www.youtube.com/embed/KIESYMqc8pQ" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+</body>
+
+<!-- ////////////////// -->
+<!-- ////////////////// -->
+
+</div> <!-- main mexicali div -->
+<!-- //// EVERTHING ABOVE IS WITHIN MEXICALI TAB /////-->
+
+  <div id="California" class="w3-container city" style="display:none">
+    <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("h4").toggle();
+    });
+});
+</script>
+</head>
+<body>
+<br/>
+<button>California's Emeral Triangle</button>
+
+  <h4>Mendocino County, Humboldt County, and Trinity County</h4>
+  <h4><img src="images/cet1.jpg" style="width: auto"></img></h4>
+
+</body>
+
+
+  </div>
+</div>
+<!-- END OF CONTENT WITHIN TABS -->
+
+
+
+<div class="w3-teal">
+
+<button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+
+<button class="w3-button w3-teal w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+
+
+<div class="w3-container">
+    <h1>Smoking Gamer: Underconstruction</h1>
+  </div>
+</div>
+
+<!-- PHOTO CONTENT -->
+<!-- Page Content -->
+<div class="container">
+
+<!-- Main component for a primary marketing message or call to action -->
+  <div style="margin:40px; padding:40px" class="jumbotron">
+    <h1 style="font-size: 40px; font-weight: bold; important">Coming Soon!</h1>
+  </div>
+
+
+
+
+<!--DIV CONTAINER FOR COUNTDOWN -->
+<div class='w3-row'style=" margin:auto; padding:5px 5px 5px 5px; border-top:2px solid #604234; border-bottom: 2px solid #604234; border-left: 2px solid #604234; border-right: 2px solid #604234; height: 340px; width: 700px;">
+       <html>
+       <style>
+       body, html {
+           height: 100%;
+           margin: ;
+       }
+
+       .bgimg {
+           background-image: url('images/420countdown.jpg');
+           height: 100%;
+           background-position: center;
+           background-size: cover;
+           position: relative;
+           color: white;
+           font-family: "Courier New", Courier, monospace;
+           font-size: 30px;
+       }
+
+       .topleft {
+           position: absolute;
+           top: 0;
+           left: 16px;
+       }
+
+       .bottomleft {
+           position: absolute;
+           bottom: 0;
+           left: 16px;
+       }
+
+       .middle {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           text-align: center;
+       }
+
+       hr {
+           margin: auto;
+           width: 40%;
+       }
+       </style>
+       <body>
+
+       <div class="bgimg">
+         <div class="topleft">
+           <p></p>
+         </div>
+         <div class="middle">
+           <h1 style="color:#3e3f3f"><b><strong> 4/20/2018 </strong></b></h1>
+           <hr>
+           <p id="demo" style="font-size:33px; color"></p>
+         </div>
+         <div class="bottomleft">
+           <p></p>
+         </div>
+       </div>
+
+       <script>
+       // Set the date we're counting down to
+       var countDownDate = new Date("April 20, 2018").getTime();
+
+       // Update the count down every 1 second
+       var countdownfunction = setInterval(function() {
+
+           // Get todays date and time
+           var now = new Date().getTime();
+
+           // Find the distance between now an the count down date
+           var distance = countDownDate - now;
+
+           // Time calculations for days, hours, minutes and seconds
+           var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+           var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+           var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+           var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+           // Output the result in an element with id="demo"
+           document.getElementById("demo").innerHTML = days + " days " + hours + " hours "
+           + minutes + " minutes " + seconds + " s";
+
+           // If the count down is over, write some text
+           if (distance < 0) {
+               clearInterval(countdownfunction);
+               document.getElementById("demo").innerHTML = "Happy 4/20";
+           }
+       }, 1000);
+       </script>
+
+       </body>
+       </html>
+
+
+
+   </div>
+<!-- DIV CONTAINER FOR COUNTDOWN END -->
+
+
+<!-- ////// ANIMATION /////// -->
+
+<!-- ////////// -->
+
+
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+
+<!-- PHOTO CONTENT END -->
+
+
+<script>
+function openLeftMenu() {
+    document.getElementById("leftMenu").style.display = "block";
+}
+function closeLeftMenu() {
+    document.getElementById("leftMenu").style.display = "none";
+}
+
+function openRightMenu() {
+    document.getElementById("rightMenu").style.display = "block";
+}
+function closeRightMenu() {
+    document.getElementById("rightMenu").style.display = "none";
+}
+</script>
+
+<!-- NEW SCRIPT -->
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-border-red";
+}
+</script>
+
+<!-- END OF NEW SCRIPT -->
+
+</body>
+</html>
